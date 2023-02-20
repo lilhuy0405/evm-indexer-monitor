@@ -134,8 +134,8 @@ function App() {
   };
   return (
     <Wrapper>
-      <Title>EVM INDEXER MONITOR</Title>
-      <SubTitle>PROD</SubTitle>
+      <Title>4BYTES EVM INDEXER MONITOR</Title>
+      <SubTitle>PROD version</SubTitle>
       <Row gutter={24}>
         <Col xl={12} lg={12} md={24} sm={24} xs={24}>
           <SubTitle>Sync Status</SubTitle>
