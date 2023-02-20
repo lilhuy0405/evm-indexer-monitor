@@ -140,7 +140,12 @@ function App() {
         <Col xl={12} lg={12} md={24} sm={24} xs={24}>
           <SubTitle>Sync Status</SubTitle>
           <CenterItemFlexBox>
-            <Button type="primary" onClick={refetchCounters}>
+            <Button
+              type="primary"
+              onClick={async () => {
+                await refetchCounters();
+              }}
+            >
               Reload
             </Button>
           </CenterItemFlexBox>
@@ -159,7 +164,12 @@ function App() {
         <Col xl={12} lg={12} md={24} sm={24} xs={24}>
           <SubTitle>Worker Status</SubTitle>
           <CenterItemFlexBox>
-            <Button type="primary" onClick={refetchRabbitMQ}>
+            <Button
+              type="primary"
+              onClick={async () => {
+                await refetchRabbitMQ();
+              }}
+            >
               Reload
             </Button>
           </CenterItemFlexBox>
