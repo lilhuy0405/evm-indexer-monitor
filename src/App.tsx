@@ -11,6 +11,8 @@ import {
   Table,
   notification,
 } from "antd";
+import { JsonRpcProvider } from "ethers";
+import { useEffect, useState } from "react";
 const Wrapper = styled.div`
   width: 80%;
   margin: 0 auto;
@@ -82,6 +84,7 @@ const configTableColumns = [
     key: "value",
   },
 ];
+export const FOUR_BYTES_ETH_RPC_URL = "https://erigon.4bytes.io";
 function App() {
   const {
     data: counters = [],
@@ -132,6 +135,23 @@ function App() {
       });
     }
   };
+
+  const [latestBlockNumber, setLatestBlockNumber] = useState(0);
+  const getLatestBlockNumber = async () => {
+    try {
+      const provider = new JsonRpcProvider("https://rpc.ankr.com/eth");
+      const latestBlockNumber = await provider.getBlockNumber();
+      setLatestBlockNumber(latestBlockNumber);
+    } catch (err) {
+      console.log(err);
+      setLatestBlockNumber(0);
+    }
+  };
+
+  useEffect(() => {
+    getLatestBlockNumber();
+  }, []);
+
   return (
     <Wrapper>
       <Title>4BYTES EVM INDEXER MONITOR</Title>
@@ -144,11 +164,25 @@ function App() {
               type="primary"
               onClick={async () => {
                 await refetchCounters();
+                await getLatestBlockNumber();
               }}
             >
               Reload
             </Button>
           </CenterItemFlexBox>
+          {
+            !isLoadingCounters && !isErrorCounters && (
+              <div style={{ margin: "10px 0", textAlign: "center"}}>
+              <b>
+                Current ETH block number: {latestBlockNumber.toLocaleString()} -
+                Block left to sync:
+                {(
+                  latestBlockNumber - (countersTableData[0].counter ?? 0)
+                ).toLocaleString()}
+              </b>
+            </div>
+            )
+          }
           {isErrorCounters ? (
             <div>error</div>
           ) : (

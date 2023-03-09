@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@adraffy/ens-normalize@1.8.9":
+  "integrity" "sha512-93OmGCV0vO8+JQ3FHG+gZk/MPHzzMPDRiCiFcCQNTCnHaaxsacO3ScTPGlu2wX2dOtgfalbchPcw1cOYYjHCYQ=="
+  "resolved" "https://registry.npmjs.org/@adraffy/ens-normalize/-/ens-normalize-1.8.9.tgz"
+  "version" "1.8.9"
+
 "@ant-design/colors@^7.0.0":
   "integrity" "sha512-iVm/9PfGCbC0dSMBrz7oiEXZaaGH7ceU40OJEfKmyuzR9R5CRimJYPlRiFtMQGQcbNMea/ePcoIebi4ASGYXtg=="
   "resolved" "https://registry.npmjs.org/@ant-design/colors/-/colors-7.0.0.tgz"
@@ -240,6 +245,16 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@noble/hashes@1.1.2":
+  "integrity" "sha512-KYRCASVTv6aeUi1tsF8/vpyR7zpfs3FUzy2Jqm+MU+LmUKhQ0y2FpfwqkCcxSg2ua4GALJd8k2R76WxwZGbQpA=="
+  "resolved" "https://registry.npmjs.org/@noble/hashes/-/hashes-1.1.2.tgz"
+  "version" "1.1.2"
+
+"@noble/secp256k1@1.7.1":
+  "integrity" "sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw=="
+  "resolved" "https://registry.npmjs.org/@noble/secp256k1/-/secp256k1-1.7.1.tgz"
+  "version" "1.7.1"
+
 "@rc-component/context@^1.3.0":
   "integrity" "sha512-6QdaCJ7Wn5UZLJs15IEfqy4Ru3OaL5ctqpQYWd5rlfV9wwzrzdt6+kgAQZV/qdB0MUPN4nhyBfRembQCIvBf+w=="
   "resolved" "https://registry.npmjs.org/@rc-component/context/-/context-1.3.0.tgz"
@@ -359,6 +374,11 @@
   "version" "3.1.0"
   dependencies:
     "@swc/core" "^1.3.30"
+
+"aes-js@4.0.0-beta.3":
+  "integrity" "sha512-/xJX0/VTPcbc5xQE2VUP91y1xN8q/rDfhEzLm+vLc3hYvb5+qHCnpJRuFcrKn63zumK/sCwYYzhG8HP78JYSTA=="
+  "resolved" "https://registry.npmjs.org/aes-js/-/aes-js-4.0.0-beta.3.tgz"
+  "version" "4.0.0-beta.3"
 
 "ansi-styles@^3.2.1":
   "integrity" "sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA=="
@@ -630,6 +650,18 @@
   "integrity" "sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg=="
   "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   "version" "1.0.5"
+
+"ethers@^6.1.0":
+  "integrity" "sha512-aC45YGbvgXt7Nses5WsdQwc1cUIrrQt32zeFShNW7ZT3RQCIHBnd4nmbE5sJmrp70uTdwkRHkr4cZr1D/YwFPg=="
+  "resolved" "https://registry.npmjs.org/ethers/-/ethers-6.1.0.tgz"
+  "version" "6.1.0"
+  dependencies:
+    "@adraffy/ens-normalize" "1.8.9"
+    "@noble/hashes" "1.1.2"
+    "@noble/secp256k1" "1.7.1"
+    "aes-js" "4.0.0-beta.3"
+    "tslib" "2.4.0"
+    "ws" "8.5.0"
 
 "filter-obj@^5.1.0":
   "integrity" "sha512-qWeTREPoT7I0bifpPUXtxkZJ1XJzxWtfoWWkdVGqa+eCr3SHW/Ocp89o8vLvbUuQnadybJpjOKu4V+RwO6sGng=="
@@ -1380,6 +1412,11 @@
   "resolved" "https://registry.npmjs.org/toggle-selection/-/toggle-selection-1.0.6.tgz"
   "version" "1.0.6"
 
+"tslib@2.4.0":
+  "integrity" "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
+  "version" "2.4.0"
+
 "typescript@^4.9.3":
   "integrity" "sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
@@ -1409,3 +1446,8 @@
   "integrity" "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="
   "resolved" "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   "version" "1.0.2"
+
+"ws@8.5.0":
+  "integrity" "sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg=="
+  "resolved" "https://registry.npmjs.org/ws/-/ws-8.5.0.tgz"
+  "version" "8.5.0"
